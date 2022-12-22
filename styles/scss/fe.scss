@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./nav";
+@import "./layout";
+@import "./utils";
+@import "./offer-banner";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+.body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+}

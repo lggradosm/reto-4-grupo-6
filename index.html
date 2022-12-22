@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tienda</title>
+    <link
+      rel="shortcut icon"
+      href="./src/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/css/fe.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
   </head>
-  <body></body>
+  <body class="body">
+    <header>
+      <nav class="nav f-elements f-elements--between">
+        <div class="nav__items-left" id="menu-trigger">
+          <i class="nav__icons bi-list"></i>
+        </div>
+        <div class="nav__brand">
+          <img
+            class="nav__brand-image"
+            src="./src/images/logo.png"
+            alt="logo_tienda"
+          />
+        </div>
+        <div class="nav__items-right f-elements">
+          <i class="nav__icons bi-person"></i>
+          <i class="nav__icons bi-cart text-center nav__icons-cart"
+            ><span class="cart__indicator">1</span></i
+          >
+        </div>
+        <div class="nav__menu" id="menu">
+          <i class="nav__menu-icon bi-x" id="close-menu"></i>
+          <ul class="menu__list f-elements f-elements--responsive gap-sm">
+            <li><a class="menu__item" href="#">Destacados</a></li>
+            <li><a class="menu__item" href="#">Calzado</a></li>
+            <li><a class="menu__item" href="#"> Ropa</a></li>
+            <li><a class="menu__item" href="#">Accesorios</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="offer-banner f-elements f-elements--between">
+        <div></div>
+        <div class="offer-banner__text text-center">
+          <p>DESCUENTO</p>
+          <h3>70%</h3>
+          <p>En todo polos</p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="./js/index.js" type="module"></script>
 </html>

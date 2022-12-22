@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+.nav {
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.nav__brand-image {
+  width: 60px;
+  cursor: pointer;
+}
+
+.nav__icons {
+  color: black;
+  font-size: 1.4em;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav__menu {
+  position: absolute;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  color: black;
+  left: -100%;
+  top: 0;
+  transition: left 0.4s;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.nav__menu-icon {
+  color: black;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+}
+
+.active {
+  left: 0px;
+}
+
+.menu__list {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.menu__item {
+  font-size: 1.2em;
+  color: black;
+  text-decoration: none;
+}
+
+.nav__icons-cart {
+  position: relative;
+}
+
+.cart__indicator {
+  right: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 0.6em;
+  border-radius: 50%;
+  background-color: #292e49;
+  color: white;
+}
+
+.f-elements {
+  display: flex;
+}
+
+.f-elements--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.f-elements--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-elements--responsive {
+  flex-direction: column;
+}
+
+.f-elements--y-center {
+  align-items: center;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 1rem;
+}
+
+.gap-sm {
+  gap: 10px;
+}
+
+.f-direction-colum {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.offer-banner {
+  width: 100%;
+  background: linear-gradient(45deg, #536976, #292e49);
+  border-radius: 1rem;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.offer-banner__text {
+  color: white;
+}
+
+.offer-banner__text h3,
+.offer-banner__text p {
+  margin: 0;
+}
+
+.offer-banner__text h3 {
+  font-size: 2em;
+}
+
+.body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=fe.css.map */
