@@ -1,0 +1,14 @@
+@import './modules/variable.css';
+
+.body {
+  background-color: #20232a;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.swiper {
+  width: 100%;
+  min-height: 50vh;
+  max-height: 50vh;
+}

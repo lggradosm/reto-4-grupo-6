@@ -1,0 +1,18 @@
+.icon {
+  display: flex;
+  font-size: 1.75rem;
+
+  &--menu,
+  &--close {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    top: calc(var(--padding-nav) + 0.25rem);
+    right: var(--padding-container);
+    transition: top 0.25s;
+  }
+}

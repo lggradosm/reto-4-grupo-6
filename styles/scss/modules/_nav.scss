@@ -1,0 +1,17 @@
+.nav {
+  --padding-nav: 1rem;
+  padding-top: var(--padding-nav);
+  padding-bottom: var(--padding-nav);
+  transition: padding 0-25s;
+
+  &--scroll {
+    --padding-nav: 0.5rem;
+  }
+
+  &__logo {
+    display: flex;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
+
