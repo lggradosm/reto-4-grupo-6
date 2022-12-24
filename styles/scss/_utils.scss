@@ -1,9 +1,25 @@
 .gap-sm {
   gap: 10px;
 }
+.flex-1 {
+  flex: 1;
+}
+
 .f-direction-colum {
   flex-direction: column;
 }
 .text-center {
   text-align: center;
+}
+.text-crossed {
+  text-decoration: line-through;
+}
+.text-red {
+  color: red;
+}
+.text-bold {
+  font-weight: bold;
+}
+.filter-gray {
+  filter: grayscale(100%);
 }
