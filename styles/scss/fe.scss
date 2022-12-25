@@ -6,12 +6,21 @@
 @import "./banners";
 @import "./swiper";
 @import "./product";
+@import "./cart";
 .body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   position: relative;
+  scrollbar-color: black;
 }
 .main {
   padding-top: 5rem;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #000000, $alpha: 0.9);
+  border-radius: 10px;
 }

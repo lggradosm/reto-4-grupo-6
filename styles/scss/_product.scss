@@ -57,6 +57,10 @@
 }
 .product__description {
   font-size: 0.8em;
+  min-height: 30px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .product__button {
   width: 100%;

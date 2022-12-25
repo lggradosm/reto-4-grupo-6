@@ -35,9 +35,10 @@
         </div>
         <div class="nav__items-right f-elements">
           <i class="nav__icons bi-person"></i>
-          <i class="nav__icons bi-cart text-center nav__icons-cart"
-            ><span class="cart__indicator">1</span></i
-          >
+          <i
+            class="nav__icons bi-cart text-center nav__icons-cart"
+            id="btnCart"
+          ></i>
         </div>
         <div class="nav__menu" id="menu">
           <i class="nav__menu-icon bi-x" id="close-menu"></i>
@@ -51,10 +52,27 @@
       </nav>
     </header>
     <main class="container main">
-      <section class="banner-top"></section>
-
       <section class="products">
         <div class="products__grid" id="product_grid"></div>
+      </section>
+      <section class="cart" id="cart">
+        <div class="cart__content--close"></div>
+
+        <div class="cart__content">
+          <h3>Detalle de compra</h3>
+          <div class="cart__items" id="cartItems"></div>
+
+          <div class="cart__payment">
+            <div class="separator"></div>
+            <div class="f-elements f-elements--between text-sm">
+              <p class="text-bold">Total:</p>
+              <p id="total">S/ 200.00</p>
+            </div>
+          </div>
+          <div class="cart__pay">
+            <button class="cart__pay-button">Pagar</button>
+          </div>
+        </div>
       </section>
     </main>
     <footer></footer>
