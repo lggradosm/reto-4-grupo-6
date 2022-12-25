@@ -58,6 +58,7 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s;
+  border-radius: 10px;
 }
 .cart__pay-button:hover {
   background-color: rgba($color: $primary-color, $alpha: 0.95);
@@ -66,6 +67,7 @@
   display: flex;
   height: 75%;
   flex-direction: column;
+
   justify-content: space-between;
 }
 

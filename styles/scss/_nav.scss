@@ -9,11 +9,9 @@
   z-index: 26;
 }
 
-.nav__brand-image {
-  width: 60px;
-  cursor: pointer;
+.nav__brand {
+  letter-spacing: 5px;
 }
-
 .nav__icons {
   color: black;
   font-size: 1.4em;
@@ -63,8 +61,37 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  font-size: 0.6em;
+  padding-top: 2px;
+  padding-right: 2px;
+  font-size: 0.5em;
   border-radius: 50%;
   background-color: #292e49;
   color: white;
+  text-align: center;
+}
+.menu__list-lg {
+  list-style: none;
+  padding: 0;
+  width: 100px !important;
+  display: none;
+}
+.menu__list-lg a:hover {
+  color: $primary-color !important;
+}
+@media (min-width: 992px) {
+  .nav__items-left {
+    display: none;
+  }
+  .menu__list-lg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 1400px) {
+  .products__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
