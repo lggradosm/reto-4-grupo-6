@@ -16,7 +16,7 @@
   background-color: white;
   z-index: 26;
   height: 100%;
-  width: 400px;
+  width: 100%;
 }
 .cart__payment {
   margin-top: 20px;
@@ -32,8 +32,6 @@
 }
 .cart__items {
   overflow-y: auto;
-
-  height: 65%;
   display: flex;
   flex-direction: column !important;
 }
@@ -63,4 +61,16 @@
 }
 .cart__pay-button:hover {
   background-color: rgba($color: $primary-color, $alpha: 0.95);
+}
+.cart__content-wrapper {
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .cart__content {
+    width: 400px;
+  }
 }

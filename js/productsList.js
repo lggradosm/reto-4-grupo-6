@@ -45,11 +45,18 @@ export const productsList = () => {
     });
   };
 
+  const saveInLocalStorage = () => {
+    let cartDetail = [];
+    cartDetail.push({ cartList: cartList, total: total });
+    localStorage.setItem("cartDetail", JSON.stringify(cartDetail));
+  };
+
   const addProductToCart = (product) => {
     cartList.push(product);
     product.discount
       ? (total += (product.price * (100 - product.discount)) / 100)
       : (total += product.price);
+    saveInLocalStorage();
   };
 
   const removeProductToCart = (index) => {
@@ -61,6 +68,7 @@ export const productsList = () => {
     cartCounter--;
     renderCartCounterHtml();
     renderCartDetailHtml();
+    saveInLocalStorage();
   };
 
   const renderCartCounterHtml = () => {
@@ -190,6 +198,13 @@ export const productsList = () => {
   };
 
   const init = () => {
+    let cartDetail = JSON.parse(localStorage.getItem("cartDetail"));
+    cartDetail = cartDetail ? cartDetail[0] : null;
+    if (cartDetail) {
+      cartList = cartDetail.cartList;
+      cartCounter = cartDetail.cartList.length;
+      total = cartDetail.total;
+    }
     if (cartCounter > 0) renderCartCounterHtml();
     renderProducts();
     btnCartClickHandler();
