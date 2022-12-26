@@ -76,8 +76,8 @@ const readProductos = () => {
       <td>${cod}</td>
       <td>${name}</td>
       <td>${stock}</td>
-      <td>${price}</td>
-      <td>${desc}</td>
+      <td>${`S/. ` + price}</td>
+      <td>${desc + ` %`}</td>
       <td>
         <img 
         src="${imgUrl}"
