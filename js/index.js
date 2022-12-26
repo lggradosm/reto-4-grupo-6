@@ -58,9 +58,9 @@ const createProducto = () => {
   const price = documentFormProducto.price.value;
   const desc = documentFormProducto.desc.value;
   const imgUrl = documentFormProducto.imgUrl.value;
-  productos.push({ cod, name, stock, price, desc, imgUrl });
+  const grade = documentFormProducto.grade.value;
+  productos.push({ cod, name, stock, price, desc, imgUrl, grade });
   localStorage.setItem(PRODUCTOS_CRUD_DATA, JSON.stringify(productos));
-  console.log('Hello Wolrd')
   readProductos();
 
 };
@@ -69,7 +69,7 @@ const readProductos = () => {
   const tBodyProductos = document.getElementById('tBodyProductos');
   tBodyProductos.innerHTML = '';
   productos.forEach((element, index) => {
-    const { cod, name, stock, price, desc, imgUrl } = element;
+    const { cod, name, stock, price, desc, imgUrl, grade } = element;
     tBodyProductos.innerHTML += `
     <tr>
       <td>${index + 1}</td>
@@ -83,6 +83,7 @@ const readProductos = () => {
         src="${imgUrl}"
         alt= "${name}" class="img-fluid" style="max-width: 128px" />
       </td>
+      <td>${grade}</td>
       <td>
       <button 
         class="btn btn-primary m-1"
@@ -105,7 +106,7 @@ const readProductos = () => {
 const readProducto = (index) => {
   const documentFormProducto = document.forms['formProducto'];
   const producto = productos.slice(index, index + 1)[0];
-  const { cod, name, stock, price, desc, imgUrl } = producto;
+  const { cod, name, stock, price, desc, imgUrl, grade } = producto;
   documentFormProducto.index.value = index;
   documentFormProducto.cod.value = cod;
   documentFormProducto.name.value = name;
@@ -113,6 +114,7 @@ const readProducto = (index) => {
   documentFormProducto.price.value = price;
   documentFormProducto.desc.value = desc;
   documentFormProducto.imgUrl.value = imgUrl;
+  documentFormProducto.grade.value = grade;
   document.getElementById('button').innerText = 'Editar';
 };
 
@@ -124,7 +126,8 @@ const updateProducto = (index) => {
   const price = documentFormProducto.price.value;
   const desc = documentFormProducto.desc.value;
   const imgUrl = documentFormProducto.imgUrl.value;
-  productos.splice(index, 1, { cod, name, stock, price, desc, imgUrl });
+  const grade = documentFormProducto.grade.value;
+  productos.splice(index, 1, { cod, name, stock, price, desc, imgUrl, grade });
   localStorage.setItem(PRODUCTOS_CRUD_DATA, JSON.stringify(productos));
   documentFormProducto.reset();
   readProductos();
