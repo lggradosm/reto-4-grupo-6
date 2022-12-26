@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda de Ropa</title>
 
@@ -39,7 +38,7 @@
             <a href="#" class="list__link">Mujeres</a>
           </li>
           <li>
-            <a href="#" class="list__link">Carrito</a>
+            <a href="#" class="list__link">Accesorios</a>
           </li>
           <li class="icon icon--close" id="icon-close">
             <i class="bi bi-x-circle"></i>
@@ -97,7 +96,7 @@
 
     <section class="py-3">
       <div class="container d-flex flex-column gap-4">
-        <h4 class="text-center">Compra por categoría</h4>
+        <h4 class="text-center text-secondary">Compra por categoría</h4>
         <div class="row d-flex justify-content-center g-4">
           <div class="col-md-4">
             <div class="card bg-primary border border-2 border-light border-opacity-25 mx-auto" style="width: 18rem;">
@@ -118,32 +117,61 @@
               <div class="card-body">
                 <h5 class="card-title text-center">Ropa de Mujer</h5>
               </div>
-                <img
-                  src="https://img.freepik.com/foto-gratis/conjunto-ropa-mujer-moda-camisa-jeans-bolso-look-moda-hipster-endecha-plana_169016-3209.jpg"
-                  class="card-img-top" alt="anime 2" width="256" height="144"
-                  style="width: 100%; height: 180px; object-fit: cover;" />
-                <div class="mx-auto">
-                  <a href="#" class="m-2 btn btn-light">Visitar la sección Mujeres</a>
-                </div>
+              <img
+                src="https://img.freepik.com/foto-gratis/conjunto-ropa-mujer-moda-camisa-jeans-bolso-look-moda-hipster-endecha-plana_169016-3209.jpg"
+                class="card-img-top" alt="anime 2" width="256" height="144"
+                style="width: 100%; height: 180px; object-fit: cover;" />
+              <div class="mx-auto">
+                <a href="#" class="m-2 btn btn-light">Visitar la sección Mujeres</a>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card bg-danger border border-2 border-light border-opacity-25 mx-auto" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Accesorios</h5>
-                </div>
-                <img
-                  src="https://img.freepik.com/fotos-premium/ropa-accesorios-hombres-mujeres-listos-nuevo-viaje-normal-estilo-vida_11304-2299.jpg"
-                  class="card-img-top" alt="anime 3" width="256" height="144"
-                  style="width: 100%; height: 180px; object-fit: cover;">
-                <div class="mx-auto">
-                  <a href="#" class="m-2 btn btn-light">Visitar la sección accesorios</a>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-danger border border-2 border-light border-opacity-25 mx-auto" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-center">Accesorios</h5>
+              </div>
+              <img
+                src="https://img.freepik.com/fotos-premium/ropa-accesorios-hombres-mujeres-listos-nuevo-viaje-normal-estilo-vida_11304-2299.jpg"
+                class="card-img-top" alt="anime 3" width="256" height="144"
+                style="width: 100%; height: 180px; object-fit: cover;">
+              <div class="mx-auto">
+                <a href="#" class="m-2 btn btn-light">Visitar la sección accesorios</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
+    <div class="py-5 container">
+      <section class="col-md-4">
+        <form class="d-flex flex-column gap-3" id="formCompras">
+          <div class="form-floating" hidden>
+            <input type="number" class="form-control bg-transparent text-light" id="index" placeholder="Numero"
+              readonly />
+            <label for="index">Id</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control bg-transparent text-light" id="name" placeholder="Nombre" required />
+            <label for="name">Nombre</label>
+          </div>
+          <div class="form-floating">
+            <input type="number" class="form-control bg-transparent text-light" id="price" placeholder="Precio" required />
+            <label for="price">Precio</label>
+          </div>
+          <div class="form-floating">
+            <input type="number" class="form-control bg-transparent text-light" id="Cant" placeholder="Cantidad" required />
+            <label for="Cant">Cantidad</label>
+          </div>
+          <div class="form-floating">
+            <input type="number" class="form-control bg-transparent text-light" id="all" placeholder="Total"
+              required />
+            <label for="all">Total</label>
+          </div>
+          <button class="btn btn-outline-light btn-lg w-100" id="button">Comprar</button>
+        </form>
+      </section>
+    </div>
   </main>
   <footer class="section f-elements f-elements--center">By Gabriel Grados y Daniel García</footer>
 
